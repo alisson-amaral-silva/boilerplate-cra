@@ -1,0 +1,35 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "displayName": true
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  },
+  "presets": [
+    ["@babel/preset-env",
+      {
+        "targets":
+        {
+          "node": "current"
+        }
+      }
+      ],
+     "@babel/preset-typescript",
+     "@babel/preset-react"
+  ]
+}
